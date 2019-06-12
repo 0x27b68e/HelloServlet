@@ -10,17 +10,18 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  
+  <context-param>
+  	<param-name>database</param-name>
+  	<param-value>Mysql</param-value>
+  </context-param>
+  
   <servlet>
-  	<servlet-name>sample</servlet-name>
-  	<jsp-file>/sample.jsp</jsp-file>
+    <servlet-name>sample</servlet-name>
+    <jsp-file>/sample.jsp</jsp-file>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>sample</servlet-name>
-  	<url-pattern>/sample</url-pattern>
+    <servlet-name>sample</servlet-name>
+    <url-pattern>/sample</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
 </web-app>
