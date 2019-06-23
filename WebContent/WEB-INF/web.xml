@@ -9,16 +9,41 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <listener>
+  	<listener-class>quan.com.session.WebsiteSessionListener</listener-class>
+  </listener>
+  
+  
   <context-param>
     <param-name>database</param-name>
     <param-value>Mysql</param-value>
   </context-param>
+  
   <servlet>
     <servlet-name>sample</servlet-name>
     <jsp-file>/sample.jsp</jsp-file>
+    <init-param>
+    	<param-name>num1</param-name>
+    	<param-value>2</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>sample</servlet-name>
     <url-pattern>/sample</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>add</servlet-name>
+    <servlet-class>quan.com.AddServlet</servlet-class>
+    <init-param>
+    	<param-name>num1</param-name>
+    	<param-value>0</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>add</servlet-name>
+    <url-pattern>/add</url-pattern>
   </servlet-mapping>
 </web-app>
