@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1" import="java.sql.*" isELIgnored="false" errorPage="error.jsp" %>
 <%@ page import="java.util.Date" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,11 +30,10 @@ session scope: ${sessionScope["add"]}
 </br>UserName: <c:out value="${username}" />
 </c:if>
 
+<!-- forEach -->
 </br>List of Employee: 
 <c:forEach items="${listEmployee}" var="employee">
-
 ${employee.name} </br>
-
 </c:forEach>
 
 </body>
