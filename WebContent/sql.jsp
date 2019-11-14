@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +17,16 @@
 <c:forEach items="${resultSet.rows}" var="alien">
    <c:out value="${alien.id}"></c:out>: <c:out value="${alien.color}"></c:out>: <c:out value="${alien.name}"></c:out>
 </c:forEach>
+
+<!-- Using functions in jsp -->
+<c:set var="str" value="I m Nguyn Viet Quan"></c:set>
+Length: ${fn:length(str)}
+
+<c:forEach var="item" items="${fn:split(str,' ')}">
+	<br><c:out value="${item}"></c:out>
+</c:forEach>
+
+<br> Index Of 'Viet': ${fn:indexOf(str,"Viet")}
 
 </body>
 </html>

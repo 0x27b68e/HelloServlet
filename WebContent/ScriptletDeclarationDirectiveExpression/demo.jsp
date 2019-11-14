@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<!--declaration tag  -->
+<%!
+
+%>
+
+<!-- scriptlet tag  -->
 <%
 	int i = 1;
 	out.print(i);
@@ -20,6 +26,7 @@
 	out.print(j);
 %>
 
+<!--directive tag  -->
 <%= j %>
 
 </body>
